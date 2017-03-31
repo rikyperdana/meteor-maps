@@ -1,0 +1,56 @@
+template(name='layout')
+    +menu
+    .green.lighten-2
+        +yield
+
+template(name='menu')
+    nav.green: .nav-wrapper
+        ul.left
+            li: a.green.darken-2 Beranda
+            li: a Tentang
+            li: a Kontak
+        a.brand-logo.center Peta Online Kementerian
+        ul.right
+            li: a Setting
+            li: a Login
+            li: a Register
+
+template(name='home')
+    .row
+        .col.m4
+            .card.z-depth-2
+                +peta1
+        .col.m4
+            .card.z-depth-2
+                +peta2
+        .col.m4
+            .card.z-depth-2
+                +peta3
+    .row
+        .col.m4
+            .card.z-depth-2
+                +peta4
+        .col.m4
+            .card.z-depth-2
+                +peta5
+        .col.m4
+            .card.z-depth-2
+                +peta6
+
+template(name='peta1')
+    .map#peta1
+
+template(name='peta2')
+    .map#peta2
+
+template(name='peta3')
+    .map#peta3
+
+template(name='peta4')
+    .map#peta4
+
+template(name='peta5')
+    .map#peta5
+
+template(name='peta6')
+    .map#peta6
