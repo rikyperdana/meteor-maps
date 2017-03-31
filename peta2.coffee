@@ -22,8 +22,8 @@ if Meteor.isClient
         
         add = () ->
 
-            curve = Math.cos pointsAdded / 20
-            polyline.addLatLng L.latLng curve * 30, pointsAdded
+            curve = Math.cos(pointsAdded / 20) * 30
+            polyline.addLatLng L.latLng curve, pointsAdded
 
             map.setView [0, pointsAdded], 2
 
