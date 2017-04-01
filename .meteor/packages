@@ -25,4 +25,4 @@ iron:router
 stylus
 fourseven:scss
 materialize:materialize
-bevanhunt:leaflet
+ahio:mapbox

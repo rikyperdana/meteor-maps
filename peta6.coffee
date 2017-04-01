@@ -2,9 +2,5 @@ if Meteor.isClient
 
     Template.peta6.onRendered ->
 
-        baseMap = L.tileLayer.provider 'OpenStreetMap.DE'
-
-        map = L.map 'peta6',
-            center: [0, 0]
-            zoom: 1
-            layers: [baseMap]
+        map = L.mapbox.map 'peta6', 'mapbox.streets'
+        map.setView [0, 0], 1

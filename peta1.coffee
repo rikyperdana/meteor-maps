@@ -4,13 +4,8 @@ if Meteor.isClient
     
     Template.peta1.onRendered ->
 
-        baseMap = L.tileLayer.provider 'OpenStreetMap.DE'
-
-        map = L.map 'peta1',
-            center: [0, 0]
-            zoom: 1
-            layers: [baseMap]
-            zoomControl: false
+        map = L.mapbox.map 'peta1', 'mapbox.streets'
+        map.setView [0, 0], 1
 
         geojson =
             type: 'LineString'
